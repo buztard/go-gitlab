@@ -83,10 +83,10 @@ func (s *DeployTokensService) ListProjectDeployTokens(pid interface{}, opt *List
 // GitLab API docs:
 // https://docs.gitlab.com/ce/api/deploy_tokens.html#create-a-project-deploy-token
 type CreateProjectDeployTokenOptions struct {
-	Name      *string    `url:"name,omitempty" json:"name,omitempty"`
-	ExpiresAt *time.Time `url:"expires_at,omitempty" json:"expires_at,omitempty"`
-	Username  *string    `url:"username,omitempty" json:"username,omitempty"`
-	Scopes    []string   `url:"scopes,omitempty" json:"scopes,omitempty"`
+	Name      *string    `url:"name,omitempty" json:"name"`
+	ExpiresAt *time.Time `url:"expires_at,omitempty" json:"expires_at"`
+	Username  *string    `url:"username,omitempty" json:"username"`
+	Scopes    []string   `url:"scopes,omitempty" json:"scopes"`
 }
 
 // CreateProjectDeployToken creates a new deploy token for a project.
@@ -170,10 +170,10 @@ func (s *DeployTokensService) ListGroupDeployTokens(gid interface{}, opt *ListGr
 // GitLab API docs:
 // https://docs.gitlab.com/ce/api/deploy_tokens.html#create-a-group-deploy-token
 type CreateGroupDeployTokenOptions struct {
-	Name      *string    `url:"name,omitempty" json:"name,omitempty"`
-	ExpiresAt *time.Time `url:"expires_at,omitempty" json:"expires_at,omitempty"`
-	Username  *string    `url:"username,omitempty" json:"username,omitempty"`
-	Scopes    []string   `url:"scopes,omitempty" json:"scopes,omitempty"`
+	Name      *string    `url:"name,omitempty" json:"name"`
+	ExpiresAt *time.Time `url:"expires_at,omitempty" json:"expires_at"`
+	Username  *string    `url:"username,omitempty" json:"username"`
+	Scopes    []string   `url:"scopes,omitempty" json:"scopes"`
 }
 
 // CreateGroupDeployToken creates a new deploy token for a group.
